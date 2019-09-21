@@ -16,6 +16,6 @@ public class App {
         ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         RpcProxyClient rpcProxyClient1 = context.getBean(RpcProxyClient.class);
         IHelloService helloService = rpcProxyClient1.clientProxy(IHelloService.class,"localhost",8080);
-        helloService.sayHello("v1.1 by spring.");
+        helloService.sayHello("by spring.");
     }
 }
